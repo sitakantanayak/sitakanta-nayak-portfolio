@@ -1,0 +1,7 @@
+<div class="loader-overlay">
+    <div class="loader-text">
+      <span *ngFor="let char of characters; let i = index" [style.animation-delay]="i * 0.1 + 's'">
+        {{char}}
+      </span>
+    </div>
+  </div>

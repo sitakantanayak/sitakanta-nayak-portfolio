@@ -1,0 +1,22 @@
+<header [ngClass]="{'scrolled': isScrolled}">
+  <div class="header-container">
+    <a class="logo" href="#">
+      <span class="logo-text">Sitakanta Nayak</span>
+    </a>
+    
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <span [ngClass]="{'open': isMenuOpen}"></span>
+    </button>
+    
+    <nav [ngClass]="{'open': isMenuOpen}">
+      <ul>
+        <li class="nav-item"><a (click)="scrollToSection('home')">Home</a></li>
+        <li class="nav-item"><a (click)="scrollToSection('about')">About</a></li>
+        <li class="nav-item"><a (click)="scrollToSection('experience')">Experience</a></li>
+        <li class="nav-item"><a (click)="scrollToSection('skills')">Skills</a></li>
+        <li class="nav-item"><a (click)="scrollToSection('projects')">Projects</a></li>
+        <li class="nav-item"><a (click)="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

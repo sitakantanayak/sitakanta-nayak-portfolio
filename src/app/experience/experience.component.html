@@ -1,0 +1,28 @@
+  <section class="skills-section" id="skills">
+    <div class="section-container">
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="skills-filter">
+        <!-- <button 
+          *ngFor="let category of experiences" 
+          [class.active]="activeCategory === category"
+          (click)="filterSkills(category)">
+          {{ category }}
+        </button> -->
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-item" *ngFor="let exp of experiences">
+          <div class="skill-header">
+            <h3 class="job-title">{{ exp.designation }}({{ exp.company }})</h3>
+            <span class="date-label">{{ exp.startDate }} - {{ exp.endDate }}</span>
+          </div>
+          <p class="experience-description">{{exp.description}}</p>
+          <div class="skills-used">
+            <span *ngFor="let skill of exp.skills" class="skill-tag">{{skill}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,96 @@
+
+<section class="contact-section" id="contact">
+  <div class="section-container">
+    <h2 class="section-title">Get In Touch</h2>
+    
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Let's talk about everything!</h3>
+        <p>Don't like forms? Send me an email directly or contact me via the platforms below.</p>
+        
+        <div class="contact-info-list">
+          <div class="contact-info-item" *ngFor="let info of contactInfo">
+            <div class="info-icon" [ngClass]="info.icon"></div>
+            <div class="info-content">
+              <h4>{{ info.title }}</h4>
+              <p>{{ info.value }}</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Dribbble">
+            <i class="fab fa-dribbble"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-form-wrapper">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form">
+          <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="name" 
+              placeholder="Your Name" 
+              [ngClass]="{'is-invalid': isSubmitted && formControls['name'].errors}"
+            >
+            <div class="error-message" *ngIf="isSubmitted && formControls['name'].errors">
+              Please enter your name
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input 
+              type="email" 
+              formControlName="email" 
+              placeholder="Your Email" 
+              [ngClass]="{'is-invalid': isSubmitted && formControls['email'].errors}"
+            >
+            <div class="error-message" *ngIf="isSubmitted && formControls['email'].errors">
+              Please enter a valid email
+            </div>
+          </div>
+          
+          <!-- <div class="form-group">
+            <input 
+              type="text" 
+              formControlName="subject" 
+              placeholder="Subject" 
+              [ngClass]="{'is-invalid': isSubmitted && formControls['subject'].errors}"
+            >
+            <div class="error-message" *ngIf="isSubmitted && formControls['subject'].errors">
+              Please enter a subject
+            </div>
+          </div> -->
+          
+          <div class="form-group">
+            <textarea 
+              formControlName="message" 
+              placeholder="Your Message" 
+              rows="5"
+              [ngClass]="{'is-invalid': isSubmitted && formControls['message'].errors}"
+            ></textarea>
+            <div class="error-message" *ngIf="isSubmitted && formControls['message'].errors">
+              Please enter your message (at least 10 characters)
+            </div>
+          </div>
+          
+          <button type="submit" class="submit-button">Send Message</button>
+          
+          <div class="form-success">
+            Thank you for your message! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

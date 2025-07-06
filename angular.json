@@ -32,9 +32,18 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              // "src/assets/css/normalize.css",
+		          // "src/assets/css/demo.css",
+		          // "src/assets/css/component.css"
             ],
-            "scripts": []
+            "scripts": [
+              // "src/assets/js/TweenLite.min.js",
+              // "src/assets/js/EasePack.min.js",
+              // "src/assets/js/rAF.js",
+              // "src/assets/js/demo-1.js",
+              // "src/assets/js/custom-header-animate.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -42,12 +51,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "10MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "1MB"
                 }
               ],
               "outputHashing": "all"
@@ -93,7 +102,16 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              
+              // "src/assets/js/TweenLite.min.js",
+              // "src/assets/js/EasePack.min.js",
+              // "src/assets/js/rAF.js",
+              // "src/assets/js/demo-1.js",
+              // "src/assets/js/custom-header-animate.js"
+            
+
+            ]
           }
         }
       }

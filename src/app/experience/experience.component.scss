@@ -1,0 +1,439 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// :host {
+//   display: block;
+// }
+
+// .experience-section {
+//   padding: 100px 0;
+//   background-color: #f8f9fa;
+//   font-family: 'Poppins', sans-serif;
+//   overflow: hidden;
+// }
+
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
+
+// .section-title {
+//   text-align: center;
+//   font-size: 2.5rem;
+//   margin-bottom: 60px;
+//   color: #2d3436;
+//   position: relative;
+  
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     bottom: -15px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 80px;
+//     height: 4px;
+//     background: linear-gradient(to right, #6c5ce7, #00cec9);
+//     border-radius: 2px;
+//   }
+// }
+
+// /* Timeline Container */
+// .timeline-container {
+//   position: relative;
+//   margin-top: 80px;
+// }
+
+// /* Timeline Progress Bar */
+// .timeline-progress-bar {
+//   position: relative;
+//   height: 4px;
+//   background-color: #e0e0e0;
+//   border-radius: 2px;
+//   margin: 0 50px;
+// }
+
+// .timeline-progress {
+//   position: absolute;
+//   height: 100%;
+//   width: 0;
+//   background: linear-gradient(to right, #6c5ce7, #00cec9);
+//   border-radius: 2px;
+//   transition: width 0.5s ease;
+// }
+
+// /* Timeline Navigation */
+// .timeline-nav {
+//   display: flex;
+//   justify-content: space-between;
+//   margin: 20px 0;
+//   padding: 0 20px;
+// }
+
+// .nav-arrow {
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;
+//   background-color: white;
+//   border: none;
+//   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   transition: all 0.3s ease;
+  
+//   &:hover:not([disabled]) {
+//     transform: translateY(-2px);
+//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+//   }
+  
+//   &:disabled {
+//     opacity: 0.5;
+//     cursor: not-allowed;
+//   }
+  
+//   .arrow-icon {
+//     display: inline-block;
+//     border: solid #555;
+//     border-width: 0 2px 2px 0;
+//     padding: 3px;
+    
+//     &.right {
+//       transform: rotate(-45deg);
+//     }
+    
+//     &.left {
+//       transform: rotate(135deg);
+//     }
+//   }
+// }
+
+// /* Timeline Dates */
+// .timeline-dates {
+//   position: relative;
+//   height: 60px;
+//   margin: 30px 30px;
+//   overflow: hidden;
+// }
+
+// .dates-wrapper {
+//   display: flex;
+//   position: absolute;
+//   transition: transform 0.5s ease;
+//   height: 100%;
+//   padding: 0 40px;
+// }
+
+// .date-marker {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 0 50px;
+//   position: relative;
+//   cursor: pointer;
+  
+//   .date-dot {
+//     width: 16px;
+//     height: 16px;
+//     border-radius: 50%;
+//     background-color: #e0e0e0;
+//     margin-bottom: 10px;
+//     transition: all 0.3s ease;
+//   }
+  
+//   .date-label {
+//     font-size: 0.85rem;
+//     color: #888;
+//     white-space: nowrap;
+//     transition: all 0.3s ease;
+//     transform: translateY(0);
+//   }
+  
+//   &:hover .date-dot {
+//     background-color: #6c5ce7;
+//     transform: scale(1.2);
+//   }
+  
+//   &:hover .date-label {
+//     color: #6c5ce7;
+//     transform: translateY(2px);
+//   }
+  
+//   &.active {
+//     .date-dot {
+//       background-color: #6c5ce7;
+//       transform: scale(1.5);
+//     }
+    
+//     .date-label {
+//       color: #2d3436;
+//       font-weight: 600;
+//       transform: translateY(2px);
+//     }
+//   }
+// }
+
+// /* Timeline Content */
+// .timeline-content-wrapper {
+//   position: relative;
+//   margin-top: 40px;
+//   overflow: hidden;
+// }
+
+// .timeline-slider {
+//   display: flex;
+//   transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+// }
+
+// .timeline-item {
+//   min-width: 100%;
+//   padding: 0 20px;
+//   opacity: 0.4;
+//   transition: opacity 0.5s ease;
+  
+//   &.active {
+//     opacity: 1;
+//   }
+// }
+
+// .experience-card {
+//   background-color: white;
+//   border-radius: 12px;
+//   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+//   padding: 30px;
+//   height: 100%;
+//   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+//   &:hover {
+//     transform: translateY(-5px);
+//     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+//   }
+// }
+
+// .experience-header {
+//   margin-bottom: 20px;
+  
+  .job-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: #ffffff;
+  }
+  
+  .company-name {
+    font-size: 1.1rem;
+    color: #6c5ce7;
+    font-weight: 500;
+  }
+//}
+
+// .experience-body {
+  .experience-description {
+    margin-bottom: 25px;
+    line-height: 1.7;
+    color: #ffffff;
+  }
+  
+  .skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    
+    .skill-tag {
+      padding: 6px 12px;
+      border-radius: 30px;
+      background-color: rgba(108, 92, 231, 0.1);
+      color: #6c5ce7;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+// }
+
+// /* Responsive Design */
+// @media (max-width: 768px) {
+//   .experience-section {
+//     padding: 70px 0;
+//   }
+  
+//   .section-title {
+//     font-size: 2rem;
+//     margin-bottom: 40px;
+//   }
+  
+//   .date-marker {
+//     padding: 0 30px;
+//   }
+  
+//   .experience-card {
+//     padding: 25px;
+//   }
+// }
+
+// @media (max-width: 576px) {
+//   .experience-section {
+//     padding: 50px 0;
+//   }
+  
+//   .section-title {
+//     font-size: 1.8rem;
+//   }
+  
+//   .date-marker {
+//     padding: 0 20px;
+//   }
+  
+//   .timeline-progress-bar {
+//     margin: 0 20px;
+//   }
+  
+//   .experience-card {
+//     padding: 20px;
+//   }
+  
+//   .experience-header .job-title {
+//     font-size: 1.3rem;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:host {
+    display: block;
+    width: 100%;
+    background-color: #0a0a0a;
+  }
+
+  .skills-section{
+    padding: 6rem 0;
+  }
+  
+  .section-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 3px;
+    background-color: #007bff;
+  }
+  
+  
+  .skills-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    
+    button {
+      background: none;
+      border: none;
+      color: #fff;
+      opacity: 0.6;
+      font-size: 1rem;
+      padding: 8px 20px;
+      cursor: pointer;
+      margin: 0 5px 10px;
+      transition: all 0.3s ease;
+      border-radius: 20px;
+      
+      &:hover, &.active {
+        opacity: 1;
+        background: linear-gradient(90deg, rgba(121, 40, 202, 0.2), rgba(255, 0, 128, 0.2));
+        box-shadow: 0 5px 15px rgba(121, 40, 202, 0.2);
+      }
+      
+      &.active {
+        border-bottom: 2px solid #FF0080;
+      }
+    }
+  }
+  
+  .skills-grid {
+         display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        height: 20rem;
+        gap: 30px;
+  }
+  
+  .skill-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+    h3 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    
+    .skill-percent {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+  
+  .skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #7928CA, #FF0080);
+      border-radius: 4px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

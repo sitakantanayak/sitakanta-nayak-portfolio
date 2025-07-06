@@ -1,0 +1,41 @@
+<section class="projects-section" id="projects">
+  <div class="section-container">
+    <h2 class="section-title">My Projects</h2>
+    
+    <div class="projects-filter">
+      <button 
+        *ngFor="let category of categories" 
+        [class.active]="activeCategory === category"
+        (click)="filterProjects(category)">
+        {{ category }}
+      </button>
+    </div>
+    
+    <div class="projects-grid">
+      <div 
+        class="project-card" 
+        *ngFor="let project of getFilteredProjects()"
+        (mouseenter)="setHoveredProject(project)"
+        (mouseleave)="setHoveredProject(null)">
+        
+        <div class="project-img">
+          <img [src]="project.image" [alt]="project.title">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a [href]="project.link" target="_blank" class="project-link">View Project</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-info">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <div class="project-category">{{ project.category }}</div>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-technologies">
+            <span *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
